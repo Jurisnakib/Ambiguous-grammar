@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Ambiguity Checker</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Give me the grammar to check!</h1>
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('hello') }}">
+                  <label for="grammar">Please enter your Grammar:</label>
+                  <textarea rows="10" cols="50" name="grammar">Place your Grammar here</textarea>
+                  <br />
+                  <label for="startstage">Please enter your start stage:</label>
+                  <input type="text" name="startstage" placeholder=" 'S' "/><br />
+
+                  <label for="terminals">Please enter your terminals:</label>
+                  <input type="text" name="terminals" placeholder=" ['a', 'b'] "/><br />
+
+                  <input type="submit" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
